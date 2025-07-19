@@ -1,0 +1,22 @@
+{
+  "name": "hello-mcp-server",
+  "version": "1.0.0",
+  "description": "A simple TypeScript MCP server with a hello tool",
+  "main": "build/index.js",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "start": "node build/index.js"
+  },
+  "keywords": ["mcp", "model-context-protocol", "typescript"],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}
