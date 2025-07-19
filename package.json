@@ -29,16 +29,7 @@
     "//dev": "Development mode - automatically rebuild when files change",
     
     "start": "node build/index.js",
-    "//start": "Run our compiled server (must build first)",
-    
-    "test:visual": "npm run build && npx tsx scripts/mcp-visual-debugger.ts",
-    "//test:visual": "Build and run visual testing with browser automation",
-    
-    "test:visual:headless": "npm run build && npx tsx scripts/mcp-visual-debugger.ts --headless",
-    "//test:visual:headless": "Same as test:visual but without visible browser window",
-    
-    "screenshot": "npx tsx scripts/screenshot-tool.ts",
-    "//screenshot": "Capture screenshots for debugging (npx runs packages without installing)"
+    "//start": "Run our compiled server (must build first)"
   },
   
   "//keywords-info": "Tags that help people find our project on npm registry",
@@ -54,33 +45,17 @@
   "license": "MIT",
   "//license": "Legal terms - MIT is very permissive (allows almost any use)",
   
+  "//dependencies-info": "External libraries our project NEEDS to run in production",
   "dependencies": {
-    "//dependencies": "External libraries our project NEEDS to run in production",
-    
-    "@modelcontextprotocol/sdk": "^0.6.0",
-    "//sdk": "Official MCP SDK - provides Server, transport, and request schemas"
+    "@modelcontextprotocol/sdk": "^0.6.0"
   },
   
+  "//devDependencies-info": "Libraries only needed for development, not in production",
   "devDependencies": {
-    "//devDependencies": "Libraries only needed for development, not in production",
-    
     "@types/node": "^20.0.0",
-    "//types-node": "TypeScript type definitions for Node.js built-in modules",
-    
-    "@types/puppeteer": "^5.4.7", 
-    "//types-puppeteer": "TypeScript types for Puppeteer browser automation",
-    
-    "puppeteer": "^24.14.0",
-    "//puppeteer": "Controls Chrome/Chromium browser for automated testing",
-    
-    "ts-node": "^10.9.2",
-    "//ts-node": "Run TypeScript files directly without compiling first",
-    
+    "ts-node": "^10.9.2", 
     "tsx": "^4.20.3",
-    "//tsx": "Fast TypeScript executor (faster alternative to ts-node)",
-    
-    "typescript": "^5.0.0",
-    "//typescript": "TypeScript compiler and language tools"
+    "typescript": "^5.0.0"
   },
   
   "//version-syntax": "The ^ symbol means 'compatible version' - allows minor updates but not major breaking changes"
