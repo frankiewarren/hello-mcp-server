@@ -117,6 +117,51 @@ A friendly greeting tool that welcomes users to the MCP server.
 }
 ```
 
+### Resources
+
+#### `server-info`
+
+A comprehensive information resource providing real-time server status and statistics.
+
+**URI**: `mcp://server-info`  
+**Name**: Server Information  
+**Description**: Current server status, statistics, and configuration details  
+**MIME Type**: `text/plain`
+
+**Example Response**:
+```
+Hello MCP Server Information
+=============================
+
+Server Details:
+- Name: hello-mcp-server
+- Version: 1.0.0
+- Description: A simple demonstration MCP server with greeting tools and server information resources
+
+Available Features:
+- Tools: say_hello - Interactive greeting tool that welcomes users with personalized messages
+- Resources: server-info - Real-time server information and statistics
+
+Server Statistics:
+- Started: 2024-07-19T20:30:15.123Z
+- Current Time: 2024-07-19T20:35:42.456Z
+- Uptime: 0h 5m 27s
+- Process ID: 12345
+- Node.js Version: v22.9.0
+- Platform: darwin
+- Architecture: arm64
+
+Capabilities:
+✓ Tool execution via CallTool requests
+✓ Resource discovery via ListResources requests  
+✓ Resource reading via ReadResource requests
+✓ Standard I/O transport communication
+✓ JSON-RPC 2.0 protocol compliance
+
+This server demonstrates basic MCP functionality including both interactive tools and informational resources.
+For more information about the Model Context Protocol, visit: https://modelcontextprotocol.io/
+```
+
 ## 📁 Project Structure
 
 ```

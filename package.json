@@ -7,9 +7,16 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "start": "node build/index.js"
+    "start": "node build/index.js",
+    "test:visual": "npm run build && npx tsx scripts/mcp-visual-debugger.ts",
+    "test:visual:headless": "npm run build && npx tsx scripts/mcp-visual-debugger.ts --headless",
+    "screenshot": "npx tsx scripts/screenshot-tool.ts"
   },
-  "keywords": ["mcp", "model-context-protocol", "typescript"],
+  "keywords": [
+    "mcp",
+    "model-context-protocol",
+    "typescript"
+  ],
   "author": "",
   "license": "MIT",
   "dependencies": {
@@ -17,6 +24,10 @@
   },
   "devDependencies": {
     "@types/node": "^20.0.0",
+    "@types/puppeteer": "^5.4.7",
+    "puppeteer": "^24.14.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.20.3",
     "typescript": "^5.0.0"
   }
 }
