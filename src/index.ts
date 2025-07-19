@@ -70,9 +70,15 @@ const server = new Server(
   },
   {
     capabilities: {
-      tools: {},
-      resources: {},
-      prompts: {},
+      tools: {
+        listChanged: true,
+      },
+      resources: {
+        listChanged: true,
+      },
+      prompts: {
+        listChanged: true,
+      },
     },
   }
 );
