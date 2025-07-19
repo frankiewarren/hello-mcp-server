@@ -1,33 +1,87 @@
 {
+  "//": "=================================================================",
+  "//comment1": "PACKAGE.JSON - Project Configuration File",
+  "//comment2": "This file tells Node.js and npm everything about our project",
+  "//comment3": "=================================================================",
+  
   "name": "hello-mcp-server",
+  "//name": "The unique name of our project - like a project ID",
+  
   "version": "1.0.0",
+  "//version": "Semantic versioning: MAJOR.MINOR.PATCH (1.0.0 = first stable release)",
+  
   "description": "A simple TypeScript MCP server with a hello tool",
+  "//description": "Human-readable explanation of what this project does",
+  
   "main": "build/index.js",
+  "//main": "Entry point - the first file Node.js runs when starting our program",
+  
   "type": "module",
+  "//type": "Use modern ES modules (import/export) instead of old CommonJS (require)",
+  
   "scripts": {
+    "//scripts": "Custom commands we can run with 'npm run [script-name]'",
+    
     "build": "tsc",
+    "//build": "Compile TypeScript to JavaScript using TypeScript Compiler (tsc)",
+    
     "dev": "tsc --watch",
+    "//dev": "Development mode - automatically rebuild when files change",
+    
     "start": "node build/index.js",
+    "//start": "Run our compiled server (must build first)",
+    
     "test:visual": "npm run build && npx tsx scripts/mcp-visual-debugger.ts",
+    "//test:visual": "Build and run visual testing with browser automation",
+    
     "test:visual:headless": "npm run build && npx tsx scripts/mcp-visual-debugger.ts --headless",
-    "screenshot": "npx tsx scripts/screenshot-tool.ts"
+    "//test:visual:headless": "Same as test:visual but without visible browser window",
+    
+    "screenshot": "npx tsx scripts/screenshot-tool.ts",
+    "//screenshot": "Capture screenshots for debugging (npx runs packages without installing)"
   },
+  
+  "//keywords-info": "Tags that help people find our project on npm registry",
   "keywords": [
     "mcp",
-    "model-context-protocol",
+    "model-context-protocol", 
     "typescript"
   ],
+  
   "author": "",
+  "//author": "Who created this project (you can fill this in)",
+  
   "license": "MIT",
+  "//license": "Legal terms - MIT is very permissive (allows almost any use)",
+  
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^0.6.0"
+    "//dependencies": "External libraries our project NEEDS to run in production",
+    
+    "@modelcontextprotocol/sdk": "^0.6.0",
+    "//sdk": "Official MCP SDK - provides Server, transport, and request schemas"
   },
+  
   "devDependencies": {
+    "//devDependencies": "Libraries only needed for development, not in production",
+    
     "@types/node": "^20.0.0",
-    "@types/puppeteer": "^5.4.7",
+    "//types-node": "TypeScript type definitions for Node.js built-in modules",
+    
+    "@types/puppeteer": "^5.4.7", 
+    "//types-puppeteer": "TypeScript types for Puppeteer browser automation",
+    
     "puppeteer": "^24.14.0",
+    "//puppeteer": "Controls Chrome/Chromium browser for automated testing",
+    
     "ts-node": "^10.9.2",
+    "//ts-node": "Run TypeScript files directly without compiling first",
+    
     "tsx": "^4.20.3",
-    "typescript": "^5.0.0"
-  }
+    "//tsx": "Fast TypeScript executor (faster alternative to ts-node)",
+    
+    "typescript": "^5.0.0",
+    "//typescript": "TypeScript compiler and language tools"
+  },
+  
+  "//version-syntax": "The ^ symbol means 'compatible version' - allows minor updates but not major breaking changes"
 }
