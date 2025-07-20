@@ -203,9 +203,9 @@ Shows how to create flexible prompt templates with parameters.
 ```
 hello-mcp-server/
 ├── src/
-│   └── index.ts              # 🎓 Main learning resource - extensively commented MCP implementation
-├── build/                    # Compiled JavaScript output
-├── TSCONFIG_EXPLAINED.md     # 📚 TypeScript configuration tutorial  
+│   └── index.ts             # 🎓 Main learning resource - extensively commented MCP implementation
+├── build/                   # ⚙️ Compiled JavaScript output
+├── TSCONFIG_EXPLAINED.md    # 📚 TypeScript configuration tutorial  
 ├── GITHUB_SETUP.md          # 🚀 Publishing guide
 ├── CONTRIBUTING.md          # 🤝 Contribution guidelines
 ├── package.json             # 📦 Dependencies and scripts (with educational comments)
